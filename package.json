@@ -27,7 +27,8 @@
     }
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "patchAndRelease": "rm -rf ./dist && npm run build && npm version patch && npm publish --access public"
   },
   "keywords": [],
   "author": "",
