@@ -1,0 +1,39 @@
+{
+  "name": "ts_multiexport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./a": {
+      "import": "./dist/a/index.js",
+      "types": "./dist/a/index.d.ts"
+    },
+    "./b": {
+      "import": "./dist/b/index.js",
+      "types": "./dist/b/index.d.ts"
+    },
+    "./c": {
+      "import": "./dist/c/index.js",
+      "types": "./dist/c/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
